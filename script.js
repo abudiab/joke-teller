@@ -1,5 +1,5 @@
-import { SPEECH_API_KEY } from "./config.js";
-
+// import { SPEECH_API_KEY } from "./config.js";
+const SPEECH_API_KEY = "ca262d49e60c4716871bd33efb82b0f8";
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
 // VoiceRSS Javascript SDK
