@@ -106,19 +106,18 @@ const VoiceRSS = {
   },
 };
 
-// const test = () => {
-//   VoiceRSS.speech({
-//     key: SPEECH_API_KEY,
-//     src: "Hello, world!",
-//     hl: "en-us",
-//     r: 0,
-//     c: "mp3",
-//     f: "44khz_16bit_stereo",
-//     ssml: false,
-//   });
-// };
-
-// test();
+// Passing Joke to VoiceRss API
+const tellMe = (joke) => {
+  VoiceRSS.speech({
+    key: SPEECH_API_KEY,
+    src: joke,
+    hl: "en-us",
+    r: 0,
+    c: "mp3",
+    f: "44khz_16bit_stereo",
+    ssml: false,
+  });
+};
 
 // Get Jokes from Joke API
 
@@ -134,7 +133,7 @@ const getJokes = async () => {
     } else {
       joke = data.joke;
     }
-    console.log(joke);
+    tellMe(joke);
   } catch (error) {
     // Catch error here
     console.log("Ops.. something isn't right..", error);
